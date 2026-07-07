@@ -1,5 +1,4 @@
 import 'package:book_app/Features/Splash/Presentation/views/widgets/sliding_text.dart';
-import 'package:book_app/core/utils/app_router.dart';
 import 'package:book_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -44,8 +43,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void NavitageToHome() {
     Future.delayed(const Duration(seconds: 3), () {
-      //GoRoute.G(context).push('/homeView');
-      context.go(AppRouter.kHomeView);
+      GoRouter.of(context).push('/homeView');
+      //context.push(AppRouter.kHomeView);
     });
   }
 
