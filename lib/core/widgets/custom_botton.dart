@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:book_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +28,7 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          text!,
+          text,
           style: Styles.textStyle18.copyWith(
             color: textColor,
             fontWeight: FontWeight.w900,

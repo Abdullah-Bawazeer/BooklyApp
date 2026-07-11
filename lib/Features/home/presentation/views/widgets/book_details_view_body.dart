@@ -2,6 +2,7 @@ import 'package:book_app/Features/home/presentation/views/widgets/book_actions.d
 import 'package:book_app/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/rating_book.dart';
+import 'package:book_app/Features/home/presentation/views/widgets/similar_box_list_view.dart';
 import 'package:book_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -40,6 +41,17 @@ class BookDetailsViewBody extends StatelessWidget {
           const BookRating(mainAxisAlignment: MainAxisAlignment.center),
           const SizedBox(height: 37),
           const BooksAction(),
+          const SizedBox(height: 50),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'You can also like',
+              style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
+            ),
+          ),
+          //const SizedBox(height: 16),
+          const SimilerBooksListView(),
+          //const SizedBox(height: 40),
         ],
       ),
     );
