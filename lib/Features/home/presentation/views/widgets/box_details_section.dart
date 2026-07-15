@@ -1,6 +1,7 @@
 import 'package:book_app/Features/home/presentation/views/widgets/book_actions.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/rating_book.dart';
+import 'package:book_app/core/utils/assets.dart';
 import 'package:book_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-          child: CustomBookImage(),
+          child: CustomBookImage(imageUrl: AssetsData.testImage),
         ),
         const SizedBox(height: 43),
         Text(

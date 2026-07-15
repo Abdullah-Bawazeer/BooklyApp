@@ -1,4 +1,5 @@
 import 'package:book_app/Features/home/presentation/views/widgets/custom_book_item.dart';
+import 'package:book_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class SimilerBooksListView extends StatelessWidget {
@@ -14,7 +15,7 @@ class SimilerBooksListView extends StatelessWidget {
         itemBuilder: ((context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 5),
-            child: CustomBookImage(),
+            child: CustomBookImage(imageUrl: AssetsData.testImage),
           );
         }),
       ),
