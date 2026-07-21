@@ -18,11 +18,16 @@ class SimilerBooksListView extends StatelessWidget {
             //height: MediaQuery.of(context).size.height * 0.2 * 1,
             height: MediaQuery.of(context).size.height * .15,
             child: ListView.builder(
+              itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: ((context, index) {
-                return const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 5),
-                  child: CustomBookImage(imageUrl: AssetsData.testImage),
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: CustomBookImage(
+                    imageUrl:
+                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
+                        AssetsData.testImage,
+                  ),
                 );
               }),
             ),
